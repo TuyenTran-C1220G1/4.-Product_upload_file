@@ -25,6 +25,7 @@ import java.io.IOException;
 public class WebConfig implements WebMvcConfigurer,ApplicationContextAware {
     @Value("${file-upload}")
     private String fileUpload;
+
     private ApplicationContext applicationContext;
 
     @Override
@@ -60,7 +61,7 @@ public class WebConfig implements WebMvcConfigurer,ApplicationContextAware {
     //Cấu hình upload file
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/image/**")
+        registry.addResourceHandler("/**")
                 .addResourceLocations("file:" + fileUpload);
 
     }

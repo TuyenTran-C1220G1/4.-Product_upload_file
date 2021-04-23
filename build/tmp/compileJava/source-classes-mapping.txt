@@ -2,13 +2,13 @@ service/ProductServiceIplm.java
  service.ProductServiceIplm
 service/IProductService.java
  service.IProductService
-AppConfig.java
- AppConfig
-model/ProductForm.java
- model.ProductForm
-controller/ProductController.java
- controller.ProductController
-WebConfig.java
- WebConfig
 model/Product.java
  model.Product
+model/ProductForm.java
+ model.ProductForm
+WebConfig.java
+ WebConfig
+AppConfig.java
+ AppConfig
+controller/ProductController.java
+ controller.ProductController

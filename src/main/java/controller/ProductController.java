@@ -23,6 +23,8 @@ import java.util.List;
 @RequestMapping("/product")
 public class ProductController {
     private final IProductService productService = new ProductServiceIplm();
+    @Value("${file-save}")
+    private String fileSave;
 
     @GetMapping("")
     public String index(Model model) {
@@ -44,7 +46,7 @@ public class ProductController {
         String fileName = multipartFile.getOriginalFilename();
         try {
             String fileUpload="";
-            FileCopyUtils.copy(productForm.getImage().getBytes(), new File(fileUpload + fileName));
+            FileCopyUtils.copy(productForm.getImage().getBytes(), new File(fileSave + fileName));
         } catch (IOException ex) {
             ex.printStackTrace();
         }
